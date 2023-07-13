@@ -5,7 +5,7 @@ import heroBackground from '../../assets/hero.jpg'
 
 export function Hero() {
   return (
-    <div className='h-screen w-full bg-hero bg-cover bg-no-repeat'>
+    <div className='pt-10 position: absolute h-screen w-full bg-hero border'>
       <Image alt='hero' src={heroImage} className='w-1/2'/>
     </div>
   )

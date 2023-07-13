@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: (theme) => {
+      backgroundImage: {
         "hero": "url('/public/images/hero.jpg')",
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
