@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "hero": "url('/public/images/hero.jpg')",
+        'hero': "url('/images/hero.jpg')",
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
@@ -16,6 +16,7 @@ module.exports = {
       colors: {
         dimGray: "#5B6366",
         lightBlue: "#bcd7db",
+        bgGray: "#E6E6E6",
         mistyRose: "#f4e1e1",
         darkCyan: "#4b9692",
         rosyBrown: "#cba091",
