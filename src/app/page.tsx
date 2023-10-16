@@ -5,6 +5,7 @@ import FAQ from "./components/FAQ/FAQ"
 import Location from "./components/Location/Location"
 import Services from "./components/Services/Services"
 import Contact from "./components/Contact/Contact"
+import Resources from "./components/Resources/Resources"
 
 export default function Home() {
   return (
@@ -14,8 +15,9 @@ export default function Home() {
       <About />
       <Services />
       <FAQ />
-      <Location />
       <Contact />
+      <Resources />
+      <Location />
     </main>
   )
 }
