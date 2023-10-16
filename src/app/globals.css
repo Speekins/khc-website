@@ -9,8 +9,8 @@
 }
 
 :root {
-  background: rgb(220,220,220);
-  background: linear-gradient(180deg, rgba(220,220,220,1) 35%, rgba(255,247,180,1) 100%);;
+  background: rgb(230, 230, 225);
+  background: linear-gradient(180deg, rgba(230, 230, 225, 1) 35%, rgba(232, 255, 247, 1) 100%);
   /* --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255; */
@@ -26,10 +26,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
