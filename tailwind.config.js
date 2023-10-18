@@ -18,6 +18,10 @@ module.exports = {
           '0%': { backgroundColor: theme('colors.red.300') },
           '100%': { backgroundColor: theme('colors.transparent') },
         },
+        slideIn: {
+          //'100%': {transform: translateX(0)},
+          '100%': {opacity: 1}
+        }
       }),
       backgroundImage: {
         'hero': "url('/images/hero.jpg')",
