@@ -5,8 +5,10 @@ import foliage from '../../assets/foliage.jpg'
 function About() {
   return (
     <div id='About' className='flex items-center justify-center'>
-      <p className='w-1/2 p-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <Image alt='headshot' src={foliage} className='w-1/2 p-2'/>
+      <div className='w-1/2 p-2'>
+        <p className='flex items-center justify-center w-1/2 p-2 text-4xl'>Here for you.</p>
+      </div>
+      <Image alt='headshot' src={foliage} className='w-1/2 p-2' />
     </div>
   )
 }

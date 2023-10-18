@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import heroImage from '../../assets/Kimberly Haka Counseling.png'
-import foliageImage from '../../assets/foliage.jpg'
+
 
 export function Hero() {
   return (

@@ -18,6 +18,10 @@ export default function Home() {
       <Contact />
       <Resources />
       <Location />
+      <footer className="mb-4">
+        <p>©2023 Kimberly Haka Counseling. All rights reserved.</p>
+        <p>Built by Haka Software Consulting</p>
+      </footer>
     </main>
   )
 }
