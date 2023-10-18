@@ -18,9 +18,9 @@ export default function Home() {
       <Contact />
       <Resources />
       <Location />
-      <footer className="mb-4">
-        <p>©2023 Kimberly Haka Counseling. All rights reserved.</p>
-        <p>Built by Haka Software Consulting</p>
+      <footer className="flex flex-col mb-4 items-center">
+        <p className="m-2 italic">©2023 Kimberly Haka Counseling. All rights reserved.</p>
+        <p className="font-bold">Made with ❤️ in Littleton, Colorado. Powered by Haka Software Consulting.</p>
       </footer>
     </main>
   )
