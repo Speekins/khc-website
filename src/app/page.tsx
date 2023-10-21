@@ -7,9 +7,9 @@ import Location from "./components/Location/Location"
 import Services from "./components/Services/Services"
 import Contact from "./components/Contact/Contact"
 import Resources from "./components/Resources/Resources"
-import React, { useEffect, useRef, useState } from "react"
+import React, { ReactNode, useEffect, useRef, useState } from "react"
 
-const RevealOnScroll = ({ children }) => {
+const RevealOnScroll = ({ children }: { children: ReactNode }) => {
   const [isVisible, setIsVisible] = useState(false)
   const ref = useRef<HTMLDivElement>(null!)
 
