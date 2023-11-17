@@ -30,7 +30,7 @@ const RevealOnScroll = ({ children }: { children: ReactNode }) => {
     }
   }, [])
 
-  const classes = `transition-opacity duration-1000 
+  const classes = `transition-opacity duration-[2000ms] 
         ${isVisible ? "opacity-100" : "opacity-0"
     }`
 
@@ -65,7 +65,7 @@ export default function Home() {
       <RevealOnScroll>
         <Location />
       </RevealOnScroll>
-      <footer className="flex flex-col mb-4 items-center">
+      <footer className="flex flex-col mt-16 mb-4 items-center">
         <p className="m-2 italic">©2023 Kimberly Haka Counseling. All rights reserved.</p>
         <p className="font-bold">Made with ❤️ in Littleton, Colorado. Powered by Haka Software Consulting.</p>
       </footer>

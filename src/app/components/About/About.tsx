@@ -4,7 +4,7 @@ import foliage from '../../assets/foliage.jpg'
 
 function About() {
   return (
-    <div id='About' className='flex items-center justify-center translate-x-12'>
+    <div id='About' className='flex items-center justify-center mt-12'>
       <div className='w-1/2 p-2'>
         <p className='flex items-center justify-center w-1/2 p-2 text-4xl fadeIn'>Here for you.</p>
       </div>
