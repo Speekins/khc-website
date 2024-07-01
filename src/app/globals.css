@@ -6,6 +6,7 @@
   .navlink {
     @apply border-none rounded-lg bg-bgGray px-4 hover:border-transparent hover:bg-rosyBrown hover:cursor-pointer hover:duration-300;
   }
+
 }
 
 :root {
@@ -33,4 +34,13 @@ body {
 
 .slide-in {
   transform: translateX(0),
+}
+
+th, td {
+  text-align: center;
+  padding: 1em
+}
+
+td:hover {
+  color: rgb(110, 191, 245)
 }
