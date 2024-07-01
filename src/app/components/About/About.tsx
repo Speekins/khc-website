@@ -16,4 +16,3 @@ function About() {
 }
 
 export default About
-"Update resources page to include new resources phot and table list of hyperlink resources"

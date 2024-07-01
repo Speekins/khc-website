@@ -4,9 +4,23 @@ import foliage from '../../assets/foliage.jpg'
 
 function Services() {
   return (
-    <div id='Services' className='flex items-center justify-center mt-12'>
-      <Image alt='headshot' src={foliage} className='w-1/2 p-2'/>
-      <p className='w-1/2 p-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div id='Services' className='offset flex items-center justify-center mt-12'>
+      <div className='relative w-1/2'>
+        <Image alt='headshot' src={foliage} />
+        <h1 className='absolute top-1/2 text-white text-9xl font-thin'>Services</h1>
+      </div>
+      <div className='flex flex-wrap items-center justify-center w-1/2'>
+        <ul className='text-3xl font-extralight w-1/2 list-disc'>
+          <li className=''>Post Partum Mothers</li>
+          <li className=''>Anxiety</li>
+          <li className=''>Depression</li>
+          <li className=''>Grief & Loss</li>
+          <li className=''>Life Transitions</li>
+          <li className=''>EMDR</li>
+          <li className=''>Motivational Inteviewing</li>
+          <li className=''>Cognitive Behavioral Therapy</li>
+        </ul>
+      </div>
     </div>
   )
 }
