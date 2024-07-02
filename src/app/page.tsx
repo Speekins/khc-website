@@ -57,10 +57,10 @@ export default function Home() {
         <FAQ />
       </RevealOnScroll>
       <RevealOnScroll>
-        <Contact />
+        <Resources />
       </RevealOnScroll>
       <RevealOnScroll>
-        <Resources />
+        <Contact />
       </RevealOnScroll>
       <RevealOnScroll>
         <Location />

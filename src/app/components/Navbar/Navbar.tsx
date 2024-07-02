@@ -1,6 +1,5 @@
 "use client"
 import React from 'react'
-import useScrollPosition from '../../../utils/useScrollPosition'
 
 function Navbar() {
 

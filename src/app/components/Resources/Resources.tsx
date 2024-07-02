@@ -6,6 +6,11 @@ import resources from '../../assets/resources.jpg'
 function Resources() {
   return (
     <div id='Resources' className='flex items-center justify-center mt-12'>
+      <div className='relative w-1/2'>
+        <Image alt='resources' src={resources} className='relative right-12'/>
+        <div className='absolute top-0 right-12 bg-slate-50 w-full h-full opacity-70'></div>
+        <h1 className='absolute top-1/2 left-20 text-8xl font-thin'>RESOURCES</h1>
+      </div>
       <table className='flex-col justify-around'>
         <thead>
           <tr>
@@ -44,7 +49,7 @@ function Resources() {
           </tr>
         </tbody>
       </table>
-      <Image alt='resources' src={resources} className='w-1/2 p-2' />
+
     </div>
   )
 }
