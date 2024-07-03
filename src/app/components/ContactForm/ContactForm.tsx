@@ -52,14 +52,15 @@ const ContactForm = () => {
 
   function handleChange(event: React.FormEvent<HTMLInputElement> | React.FormEvent<HTMLTextAreaElement>) {
     event.preventDefault()
-    const name = event.target.name
+    let target = event.target as HTMLInputElement | HTMLTextAreaElement
+    target.name
 
-    switch (name) {
-      case 'user_name': setName(event.target.value)
+    switch (target.name) {
+      case 'user_name': setName(target.value)
       break
-      case 'user_email': setEmail(event.target.value)
+      case 'user_email': setEmail(target.value)
       break
-      case 'message': setMessage(event.target.value)
+      case 'message': setMessage(target.value)
       break
     }
   }
@@ -68,8 +69,9 @@ const ContactForm = () => {
     let fields = ['user_name', 'user_email', 'message']
 
     fields.forEach(field => {
-      if (!document.getElementsByName(field)[0].value) {
-        document.getElementsByName(field)[0].style.border = '1px red solid'
+      let currentField = (document.getElementsByName(field)[0] as HTMLInputElement)
+      if (!currentField.value) {
+        currentField.style.border = '1px red solid'
       }
     })
     setStateMessage('Please fill out all required fields.')
