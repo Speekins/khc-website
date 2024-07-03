@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from 'react'
+import React, { useState } from 'react'
 import emailjs from '@emailjs/browser'
 
 const ContactForm = () => {
@@ -11,13 +11,11 @@ const ContactForm = () => {
   const sendEmail = (e: any) => {
     e.persist()
     e.preventDefault()
-
-    if (!name) {
-      return handleError('user_name')
-    } else if (!email) {
-      return handleError('user_email')
-    } else if (!message) {
-      return handleError('message')
+    clearError()
+    console.log(name + " " + email + " " + message)
+    if (!name || !email || !message) {
+      handleError()
+      return
     }
 
     setIsSubmitting(true)
@@ -34,34 +32,59 @@ const ContactForm = () => {
           setIsSubmitting(false)
           setTimeout(() => {
             setStateMessage('')
-          }, 5000) // hide message after 5 seconds
+          }, 5000)
         },
         (error) => {
           setStateMessage('Something went wrong, please try again later')
           setIsSubmitting(false)
           setTimeout(() => {
             setStateMessage('')
-          }, 5000) // hide message after 5 seconds
+          }, 5000)
         }
       )
 
     // Clears the form after sending the email
     e.target.reset()
+    setName('')
+    setEmail('')
+    setMessage('')
   }
 
   function handleChange(event: React.FormEvent<HTMLInputElement> | React.FormEvent<HTMLTextAreaElement>) {
     event.preventDefault()
-    if (event.target.name === 'user_name') {
-      setName(event.target.value)
-    } else if (name === 'user_email') {
-      setEmail(event.target.value)
-    } else {
-      setMessage(event.target.value)
+    const name = event.target.name
+
+    switch (name) {
+      case 'user_name': setName(event.target.value)
+      break
+      case 'user_email': setEmail(event.target.value)
+      break
+      case 'message': setMessage(event.target.value)
+      break
     }
   }
 
-  function handleError(name:string) {
-    document.getElementsByName(name)[0].style.border = '1px red solid'
+  function handleError() {
+    let fields = ['user_name', 'user_email', 'message']
+
+    fields.forEach(field => {
+      if (!document.getElementsByName(field)[0].value) {
+        document.getElementsByName(field)[0].style.border = '1px red solid'
+      }
+    })
+    setStateMessage('Please fill out all required fields.')
+    setIsSubmitting(false)
+    setTimeout(() => {
+      setStateMessage('')
+    }, 5000)
+  }
+
+  function clearError() {
+    let fields = ['user_name', 'user_email', 'message']
+
+    fields.forEach(field => {
+      document.getElementsByName(field)[0].style.border = ''
+    })
   }
 
   return (
@@ -73,9 +96,10 @@ const ContactForm = () => {
       </div>
       <div className='flex flex-col w-1/2 justify-between items-center mr-10'>
         <textarea onChange={handleChange} name="message" placeholder='Type message here...' className='w-2/3 h-96 m-2 p-2 rounded-md'/>
-        <input type="submit" value="Send" disabled={isSubmitting} className='text-lg bg-slate-500 border rounded-md p-2 m-2 w-40 hover:cursor-pointer hover:bg-slate-300 hover:duration-150' />
+        <input type="submit" value="Send" disabled={isSubmitting} className='text-lg bg-slate-500 border rounded-md p-2 m-2 w-40 hover:cursor-pointer hover:bg-slate-300 hover:duration-150'/>
       </div>
     </form>
   )
 }
+
 export default ContactForm
