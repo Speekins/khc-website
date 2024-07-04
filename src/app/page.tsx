@@ -65,8 +65,8 @@ export default function Home() {
       <RevealOnScroll>
         <Location />
       </RevealOnScroll>
-      <footer className="flex flex-col mt-16 mb-4 items-center">
-        <p className="m-2 italic">©2023 Kimberly Haka Counseling. All rights reserved.</p>
+      <footer className="flex flex-col mt-16 mb-4 items-center text-xs">
+        <p className="m-2 italic">©2024 Kimberly Haka Counseling. All rights reserved.</p>
         <p className="font-bold">Made with ❤️ in Littleton, Colorado. Powered by Haka Software Consulting.</p>
       </footer>
     </main>
