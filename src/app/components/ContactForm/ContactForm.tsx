@@ -92,12 +92,12 @@ const ContactForm = () => {
   return (
     <form onSubmit={sendEmail} className='flex font-sans font-thin w-screen'>
       <div className='flex flex-col w-1/2 items-end pr-10'>
-        <input onChange={handleChange} type="text" name="user_name" placeholder='Name' className='m-2 p-2 rounded-md w-1/2'/>
-        <input onChange={handleChange} type="email" name="user_email" placeholder='Email' className='m-2 p-2 rounded-md w-1/2'/>
+        <input onChange={handleChange} type="text" name="user_name" placeholder='Name' className='m-2 p-2 rounded-md w-1/2 max-xl:w-2/3 max-md:w-3/4'/>
+        <input onChange={handleChange} type="email" name="user_email" placeholder='Email' className='m-2 p-2 rounded-md w-1/2 max-xl:w-2/3 max-md:w-3/4'/>
         {stateMessage && <p className='font-thin text-xl text-slate-700'>{stateMessage}</p>}
       </div>
       <div className='flex flex-col w-1/2 justify-between items-center mr-10'>
-        <textarea onChange={handleChange} name="message" placeholder='Type message here...' className='w-2/3 h-96 m-2 p-2 rounded-md'/>
+        <textarea onChange={handleChange} name="message" placeholder='Type message here...' className='w-2/3 h-96 m-2 p-2 rounded-md max-xl:w-full max-xl:h-72 max-md:h-56'/>
         <input type="submit" value="Send" disabled={isSubmitting} className='text-lg bg-slate-500 border rounded-md p-2 m-2 w-40 hover:cursor-pointer hover:bg-slate-300 hover:duration-150'/>
       </div>
     </form>
