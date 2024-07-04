@@ -7,11 +7,11 @@ function Resources() {
   return (
     <div id='Resources' className='flex items-center justify-center mt-12'>
       <div className='relative w-1/2'>
-        <Image alt='resources' src={resources} className='relative right-12' />
-        <div className='absolute top-0 right-12 bg-slate-50 w-full h-full opacity-70'></div>
-        <h1 className='absolute top-1/3 left-10 text-8xl font-thin max-2xl:text-[80px] max-xl:text-7xl max-lg:text-5xl max-md:text-4xl'>RESOURCES</h1>
+        <Image alt='resources' src={resources} className='relative' />
+        <div className='absolute top-0 bg-slate-50 w-full h-full opacity-70'></div>
+        <h1 className='absolute top-1/3 left-2 text-8xl font-thin max-xl:text-7xl max-lg:text-6xl max-md:text-5xl'>RESOURCES</h1>
       </div>
-      <div className='w-1/2 max-lg:text-xs'>
+      <div className='w-1/2 max-lg:text-xs max-md:text-[10px]'>
         <table className='flex-col justify-around'>
           <thead>
             <tr>
