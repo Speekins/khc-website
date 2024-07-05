@@ -1,5 +1,6 @@
 "use client"
-import React from 'react'
+import React, { use } from 'react'
+import useScreenWidth from '../../../utils/useScreenWidth'
 
 function Navbar() {
 
@@ -10,6 +11,9 @@ function Navbar() {
   //     nav?.classList.add('hidden')
   //   }
   // }
+
+  const screenWidth = useScreenWidth()
+  console.log(screenWidth)
 
   return (
     <div id="navbar" className='flex position: sticky top-0 justify-between w-[95%] mt-4 p-3 bg-lightBlue rounded-md z-10 text-2xl max-xl:text-xl max-lg:text-lg max-md:text-sm max-sm:text-xs'>
