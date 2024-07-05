@@ -5,14 +5,18 @@ import resources from '../../assets/resources2.jpg'
 
 function Resources() {
   return (
-    <div id='Resources' className='flex items-center justify-center mt-12'>
-      <div className='relative w-1/2'>
-        <Image alt='resources' src={resources} className='relative' />
+    <div id='Resources' className='flex justify-between w-screen'>
+      {/* <div className='relative w-1/2 h-full object-contain'>
+        
         <div className='absolute top-0 bg-slate-50 w-full h-full opacity-70'></div>
         <h1 className='absolute top-1/3 left-2 text-8xl font-thin max-xl:text-7xl max-lg:text-6xl max-md:text-5xl'>RESOURCES</h1>
-      </div>
-      <div className='w-1/2 max-lg:text-xs max-md:text-[10px]'>
-        <table className='flex-col justify-around'>
+      </div> */}
+      {/* <Image alt='resources' src={resources} className='object-cover w-1/2' /> */}
+      <div className='relative bg-resources bg-cover w-1/2 m-0'>
+        <div className='absolute top-0 bg-slate-50 w-full h-full opacity-70'></div>
+        <h1 className='absolute top-1/3 left-2 text-8xl font-thin max-xl:text-7xl max-lg:text-6xl max-md:text-5xl'>RESOURCES</h1></div>
+      <div className='w-1/2 text-xs max-md:text-[10px]'>
+        <table className='flex-col justify-around items-center w-full'>
           <thead>
             <tr>
               <th scope="col">National Associations and Resources</th>
