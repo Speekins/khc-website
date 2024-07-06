@@ -4,9 +4,16 @@
 
 @layer components {
   .navlink {
-    @apply border-none rounded-lg bg-bgGray px-4 hover:border-transparent hover:bg-rosyBrown hover:cursor-pointer hover:duration-300;
+    @apply border-none rounded-lg bg-bgGray px-4 font-sans font-extralight hover:border-transparent hover:bg-rosyBrown hover:cursor-pointer hover:duration-300;
   }
 
+  .bar {
+    @apply block w-8 h-[2px] m-2 bg-slate-500 group-hover:bg-slate-800
+  }
+
+  td {
+    @apply hover:text-sky-600
+  }
 }
 
 :root {
@@ -39,8 +46,4 @@ body {
 th, td {
   text-align: center;
   padding: 1em
-}
-
-td:hover {
-  color: rgb(110, 191, 245)
 }

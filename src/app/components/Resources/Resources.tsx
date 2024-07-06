@@ -6,16 +6,11 @@ import resources from '../../assets/resources2.jpg'
 function Resources() {
   return (
     <div id='Resources' className='flex justify-between w-screen'>
-      {/* <div className='relative w-1/2 h-full object-contain'>
-        
+      <div className='relative bg-resources bg-cover w-1/2'>
         <div className='absolute top-0 bg-slate-50 w-full h-full opacity-70'></div>
-        <h1 className='absolute top-1/3 left-2 text-8xl font-thin max-xl:text-7xl max-lg:text-6xl max-md:text-5xl'>RESOURCES</h1>
-      </div> */}
-      {/* <Image alt='resources' src={resources} className='object-cover w-1/2' /> */}
-      <div className='relative bg-resources bg-cover w-1/2 m-0'>
-        <div className='absolute top-0 bg-slate-50 w-full h-full opacity-70'></div>
-        <h1 className='absolute top-1/3 left-2 text-8xl font-thin max-xl:text-7xl max-lg:text-6xl max-md:text-5xl'>RESOURCES</h1></div>
-      <div className='w-1/2 text-xs max-md:text-[10px]'>
+        <h1 className='absolute top-1/3 left-2 text-8xl font-thin max-xl:text-7xl max-lg:text-6xl max-md:text-5xl max-sm:text-4xl'>RESOURCES</h1>
+      </div>
+      <div className='w-1/2 text-xs max-md:text-[10px] mt-10 mb-10'>
         <table className='flex-col justify-around items-center w-full'>
           <thead>
             <tr>
