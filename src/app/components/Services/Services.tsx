@@ -2,8 +2,8 @@ import React from 'react'
 
 function Services() {
   return (
-    <div id='Services' className='offset flex items-center justify-center mt-12'>
-      <div className='relative bg-services bg-cover w-1/2'>
+    <div id='Services' className='flex items-center justify-between mt-12 w-screen'>
+      <div className='relative bg-services bg-cover w-1/2 h-screen'>
         <h1 className='absolute top-1/2 text-white text-9xl font-thin max-xl:text-8xl max-lg:text-7xl max-md:text-6xl'>Services</h1>
       </div>
       <div className='flex flex-wrap items-center justify-center w-1/2'>
