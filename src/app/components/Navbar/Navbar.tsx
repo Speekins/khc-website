@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import useScreenWidth from '../../../utils/useScreenWidth'
 
 function Navbar() {
@@ -11,12 +11,26 @@ function Navbar() {
   //     nav?.classList.add('hidden')
   //   }
   // }
-  const [click, setClick] = useState(false)
-  const screenWidth = useScreenWidth()
+  //const screenWidth = useScreenWidth()
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 720)
+
+  //choose the screen size 
+  const handleResize = () => {
+    if (window.innerWidth < 720) {
+      setIsMobile(true)
+    } else {
+      setIsMobile(false)
+    }
+  }
+
+  // create an event listener
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+  }, [])
 
   const hamburger =
     <div className='fixed flex justify-between w-full mt-2 mr-4'>
-      <div className='flex flex-col text-xs bg-lightBlue inset-x-full'>
+      <div id='mobile-nav' className="relative flex flex-col text-xs bg-lightBlue left-2 duration-300">
         <ul className=''>
           <li className=''><a href='#About'>About</a></li>
           <li className=''><a href='#Services'>Services</a></li>
@@ -26,10 +40,10 @@ function Navbar() {
           <li className=''><a href='#Location'>Location</a></li>
         </ul>
       </div>
-      <div className="hamburger group hover:cursor-pointer z-1000">
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
+      <div id='hamburger' onClick={handleClick} className="group hover:cursor-pointer duration-500 h-10 w-10">
+        <span id='bar1' className="bar"></span>
+        <span id='bar2' className="bar"></span>
+        <span id='bar3' className="bar"></span>
       </div>
     </div>
 
@@ -46,16 +60,15 @@ function Navbar() {
     </ul>
   </div>
 
-  function conditionalNav() {
-    return screenWidth.width < 650 ? hamburger : fullNav
-  }
-
   function handleClick() {
-    click === false ? setClick(true) : setClick(false)
+    document.getElementById('hamburger')?.classList.toggle('hamburger-active')
+    document.getElementById('mobile-nav')?.classList.replace('left-2','right-10')
   }
 
   return (
-    conditionalNav()
+    <>
+      {isMobile ? hamburger : fullNav}
+    </>
   )
 }
 

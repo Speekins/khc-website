@@ -8,20 +8,23 @@ const useScreenWidth = () => {
 
 
   useEffect(() => {
-    const handleWidthChange = () => {
-      setScreenWidth({
-        width: window.innerWidth
-      })
-    }
+    if (typeof window !== 'undefined') {
+      const handleWidthChange = () => {
+        setScreenWidth({
+          width: typeof window !== 'undefined' ? window.innerWidth : 0
+        })
+      }
 
-    window.addEventListener('resize', handleWidthChange)
+      window.addEventListener('resize', handleWidthChange)
 
-    return () => {
-      window.removeEventListener('resize', handleWidthChange)
+      return () => {
+        window.removeEventListener('resize', handleWidthChange)
+      }
     }
+    return null
   }, [])
 
-  return screenWidth
+  return screenWidth.width > 650
 }
 
 export default useScreenWidth
