@@ -12,9 +12,8 @@ function Navbar() {
   //   }
   // }
   //const screenWidth = useScreenWidth()
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 720)
-
-  //choose the screen size 
+  const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 720 : true)
+ 
   const handleResize = () => {
     if (window.innerWidth < 720) {
       setIsMobile(true)
@@ -23,21 +22,24 @@ function Navbar() {
     }
   }
 
-  // create an event listener
   useEffect(() => {
     window.addEventListener("resize", handleResize)
+
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
   }, [])
 
   const hamburger =
     <div className='fixed flex justify-between w-full mt-2 mr-4'>
-      <div id='mobile-nav' className="relative flex flex-col text-xs bg-lightBlue left-2 duration-300">
-        <ul className=''>
-          <li className=''><a href='#About'>About</a></li>
-          <li className=''><a href='#Services'>Services</a></li>
-          <li className=''><a href='#FAQ'>FAQ</a></li>
-          <li className=''><a href='#Contact'>Contact</a></li>
-          <li className=''><a href='#Resources'>Resources</a></li>
-          <li className=''><a href='#Location'>Location</a></li>
+      <div id='mobile-nav' className="relative text-md h-64 p-4 rounded bg-lightBlue -translate-y-full duration-500">
+        <ul className='flex flex-col justify-between h-full'>
+          <li className='navlink-mobile'><a href='#About'>About</a></li>
+          <li className='navlink-mobile'><a href='#Services'>Services</a></li>
+          <li className='navlink-mobile'><a href='#FAQ'>FAQ</a></li>
+          <li className='navlink-mobile'><a href='#Contact'>Contact</a></li>
+          <li className='navlink-mobile'><a href='#Resources'>Resources</a></li>
+          <li className='navlink-mobile'><a href='#Location'>Location</a></li>
         </ul>
       </div>
       <div id='hamburger' onClick={handleClick} className="group hover:cursor-pointer duration-500 h-10 w-10">
@@ -62,7 +64,7 @@ function Navbar() {
 
   function handleClick() {
     document.getElementById('hamburger')?.classList.toggle('hamburger-active')
-    document.getElementById('mobile-nav')?.classList.replace('left-2','right-10')
+    document.getElementById('mobile-nav')?.classList.toggle('-translate-y-full')
   }
 
   return (

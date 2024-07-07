@@ -7,6 +7,10 @@
     @apply border-none rounded-lg bg-bgGray px-4 font-sans font-extralight hover:border-transparent hover:bg-rosyBrown hover:cursor-pointer hover:duration-300;
   }
 
+  .navlink-mobile {
+    @apply hover:text-rosyBrown font-sans font-thin
+  }
+
   .bar {
     @apply block w-8 h-[2px] m-2 bg-slate-500 group-hover:bg-slate-800 duration-300
   }
