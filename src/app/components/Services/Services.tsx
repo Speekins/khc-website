@@ -1,12 +1,9 @@
 import React from 'react'
-import Image from 'next/image'
-import foliage from '../../assets/foliage.jpg'
 
 function Services() {
   return (
     <div id='Services' className='offset flex items-center justify-center mt-12'>
-      <div className='relative w-1/2'>
-        <Image alt='headshot' src={foliage} />
+      <div className='relative bg-services bg-cover w-1/2'>
         <h1 className='absolute top-1/2 text-white text-9xl font-thin max-xl:text-8xl max-lg:text-7xl max-md:text-6xl'>Services</h1>
       </div>
       <div className='flex flex-wrap items-center justify-center w-1/2'>

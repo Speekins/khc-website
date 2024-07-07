@@ -26,6 +26,8 @@ module.exports = {
       backgroundImage: {
         'hero': "url('/images/hero.jpg')",
         'resources': "url('/images/resources2.jpg')",
+        'services': "url('/images/foliage.jpg')",
+        'faq': "url('/images/bricks.jpg')",
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'

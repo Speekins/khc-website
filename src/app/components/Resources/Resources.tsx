@@ -1,7 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
-import foliage from '../../assets/foliage.jpg'
-import resources from '../../assets/resources2.jpg'
 
 function Resources() {
   return (
