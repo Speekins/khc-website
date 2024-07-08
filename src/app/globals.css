@@ -41,12 +41,10 @@
   }
 } */
 
-body,
 html {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,

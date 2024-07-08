@@ -49,7 +49,7 @@ function Navbar() {
       </div>
     </div>
 
-  const fullNav = <div id="navbar" className='flex position: sticky top-0 justify-between w-[95%] mt-4 p-3 bg-lightBlue rounded-md z-10 text-xl max-lg:text-lg max-md:text-sm max-sm:text-xs'>
+  const fullNav = <div id="navbar" className='flex sticky top-0 justify-between w-[95%] mt-4 p-3 bg-lightBlue rounded-md z-10 text-xl max-lg:text-lg max-md:text-sm max-sm:text-xs'>
     <ul className='flex justify-evenly w-1/2'>
       <li className='navlink'><a href='#About'>About</a></li>
       <li className='navlink'><a href='#Services'>Services</a></li>
