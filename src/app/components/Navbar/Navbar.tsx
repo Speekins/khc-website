@@ -14,24 +14,24 @@ function Navbar() {
   //const screenWidth = useScreenWidth()
   const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 720 : true)
  
-  // const handleResize = () => {
-  //   if (window.innerWidth < 720) {
-  //     setIsMobile(true)
-  //   } else {
-  //     setIsMobile(false)
-  //   }
-  // }
+  const handleResize = () => {
+    if (window.innerWidth < 720) {
+      setIsMobile(true)
+    } else {
+      setIsMobile(false)
+    }
+  }
 
-  // useEffect(() => {
-  //   window.addEventListener("resize", handleResize)
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
 
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize)
-  //   }
-  // }, [])
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
 
   const hamburger =
-    <div className='fixed flex justify-between w-full mt-2 mr-4'>
+    <div className='fixed flex justify-between w-full mt-2 mr-4 z-10'>
       <div id='mobile-nav' className="relative text-md h-64 p-4 rounded bg-lightBlue -translate-y-full duration-500">
         <ul className='flex flex-col justify-between h-full'>
           <li className='navlink-mobile'><a href='#About'>About</a></li>
