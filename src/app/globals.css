@@ -44,7 +44,7 @@
 html {
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   -webkit-overflow-scrolling: touch;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,
