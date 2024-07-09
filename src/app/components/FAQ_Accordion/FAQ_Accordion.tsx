@@ -42,7 +42,7 @@ const FAQ_Accordion = () => {
   }
 
   return (
-    <div className="flex flex-col justify-evenly h-full w-1/2 max-sm:w-3/4 z-20">
+    <div className="flex flex-col justify-evenly h-full w-1/2 max-sm:w-3/4 z-10">
       {faq_data.map((item, index) => (
         <AccordionItem
           key={index}

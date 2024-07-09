@@ -31,7 +31,7 @@ function Navbar() {
   }, [])
 
   const hamburger =
-    <div className='fixed flex justify-between w-full z-10'>
+    <div id='mobile-nav-container' className='fixed flex justify-between w-full'>
       <div id='mobile-nav' className="relative text-md p-4 rounded bg-lightBlue -translate-y-full duration-500 mt-2">
         <ul className='flex flex-col justify-between h-full'>
           <li className='navlink-mobile'><a href='#About'>About</a></li>
@@ -42,14 +42,14 @@ function Navbar() {
           <li className='navlink-mobile'><a href='#Location'>Location</a></li>
         </ul>
       </div>
-      <div id='hamburger' onClick={handleClick} className="group hover:cursor-pointer duration-500 h-10 w-10 mt-2 mr-4">
+      <div id='hamburger' onClick={handleClick} className="group hover:cursor-pointer duration-500 h-10 w-10 mt-2 mr-4 z-30">
         <span id='bar1' className="bar"></span>
         <span id='bar2' className="bar"></span>
         <span id='bar3' className="bar"></span>
       </div>
     </div>
 
-  const fullNav = <div id="navbar" className='flex sticky top-0 justify-between w-[95%] mt-4 p-3 bg-lightBlue rounded-md z-10 text-xl max-lg:text-lg max-md:text-sm max-sm:text-xs'>
+  const fullNav = <div id="navbar" className='flex sticky top-0 justify-between w-[95%] mt-4 p-3 bg-lightBlue rounded-md z-10 text-xl max-lg:text-lg max-md:text-sm max-sm:text-xs z-30'>
     <ul className='flex justify-evenly w-1/2'>
       <li className='navlink'><a href='#About'>About</a></li>
       <li className='navlink'><a href='#Services'>Services</a></li>
@@ -65,6 +65,7 @@ function Navbar() {
   function handleClick() {
     document.getElementById('hamburger')?.classList.toggle('hamburger-active')
     document.getElementById('mobile-nav')?.classList.toggle('-translate-y-full')
+    document.getElementById('mobile-nav-container')?.classList.toggle('z-20')
   }
 
   return (
