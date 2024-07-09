@@ -142,11 +142,6 @@ td {
 }
 
 @media (max-width: 430px) {
-  .wrapper .answer-content,
-  .wrapper .question-container{
-    font-size: 12px;
-  }
-
   .wrapper {
     margin: 4px 4%;
   }
