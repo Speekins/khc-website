@@ -46,7 +46,7 @@ export default function Home() {
   const hasMounted = useHasMounted()
 
   return (
-    <main className="">
+    <main className="flex flex-col items-center">
       {hasMounted && <Navbar />}
       <Hero />
       <RevealOnScroll>
@@ -69,7 +69,6 @@ export default function Home() {
       </RevealOnScroll>
       <footer className="flex flex-col mt-16 mb-4 items-center text-xs">
         <p className="m-2 italic">©2024 Kimberly Haka Counseling. All rights reserved.</p>
-        <p className="font-bold">Made with ❤️ in Littleton, Colorado. Powered by Haka Software Consulting.</p>
       </footer>
     </main>
   )
