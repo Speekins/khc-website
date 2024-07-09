@@ -106,6 +106,7 @@ td {
 }
 
 @media (max-width: 1150px) {
+  .wrapper .answer-content,
   .wrapper .question-container{
     font-size: 18px;
   }
@@ -124,6 +125,7 @@ td {
 }
 
 @media (max-width: 750px) {
+  .wrapper .answer-content,
   .wrapper .question-container{
     font-size: 14px;
   }
@@ -142,6 +144,7 @@ td {
 }
 
 @media (max-width: 430px) {
+  .wrapper .answer-content,
   .wrapper .question-container{
     font-size: 12px;
   }
