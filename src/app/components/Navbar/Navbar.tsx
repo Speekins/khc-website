@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react'
-import useScreenWidth from '../../../utils/useScreenWidth'
+import useScreenWidth from '../../../Hooks/useScreenWidth'
 
 function Navbar() {
 
@@ -13,7 +13,7 @@ function Navbar() {
   // }
   //const screenWidth = useScreenWidth()
   const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 720 : true)
- 
+
   const handleResize = () => {
     if (window.innerWidth < 720) {
       setIsMobile(true)
@@ -31,8 +31,8 @@ function Navbar() {
   }, [])
 
   const hamburger =
-    <div className='fixed flex justify-between w-full mt-2 mr-4 z-10'>
-      <div id='mobile-nav' className="relative text-md h-64 p-4 rounded bg-lightBlue -translate-y-full duration-500">
+    <div className='fixed flex justify-between w-full z-10'>
+      <div id='mobile-nav' className="relative text-md p-4 rounded bg-lightBlue -translate-y-full duration-500 mt-2">
         <ul className='flex flex-col justify-between h-full'>
           <li className='navlink-mobile'><a href='#About'>About</a></li>
           <li className='navlink-mobile'><a href='#Services'>Services</a></li>
@@ -42,7 +42,7 @@ function Navbar() {
           <li className='navlink-mobile'><a href='#Location'>Location</a></li>
         </ul>
       </div>
-      <div id='hamburger' onClick={handleClick} className="group hover:cursor-pointer duration-500 h-10 w-10">
+      <div id='hamburger' onClick={handleClick} className="group hover:cursor-pointer duration-500 h-10 w-10 mt-2 mr-4">
         <span id='bar1' className="bar"></span>
         <span id='bar2' className="bar"></span>
         <span id='bar3' className="bar"></span>

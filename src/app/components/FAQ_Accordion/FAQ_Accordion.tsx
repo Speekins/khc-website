@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
-import faq_data from "./FAQ_Accordion_Data";
-import { RiArrowDropDownLine } from "react-icons/ri";
+import React, { useRef, useState } from "react"
+import faq_data from "./FAQ_Accordion_Data"
+import { RiArrowDropDownLine } from "react-icons/ri"
 
 interface PropTypes {
   question: string,
@@ -9,39 +9,40 @@ interface PropTypes {
   onClick: any
 }
 
-const AccordionItem = ({ question, answer, isOpen, onClick }:PropTypes) => {
-  const contentHeight = useRef<HTMLDivElement>(null);
+const AccordionItem = ({ question, answer, isOpen, onClick }: PropTypes) => {
+  const contentHeight = useRef<HTMLDivElement>(null)
   return (
-    <div className="wrapper">
-      <div className={`question-container ${isOpen ? "active" : ""}`} onClick={onClick}>
-        <p className="question-content">{question}</p>
-        <RiArrowDropDownLine className={`arrow ${isOpen ? "active" : ""}`} />
+    <>
+      <div className="wrapper">
+        <div className={`question-container ${isOpen ? "active" : ""}`} onClick={onClick}>
+          <p className="question-content">{question}</p>
+          <RiArrowDropDownLine className={`arrow ${isOpen ? "active" : ""}`} />
+        </div>
+        <div
+          ref={contentHeight}
+          className="answer-container"
+          style={
+            isOpen && contentHeight.current
+              ? { height: contentHeight.current.scrollHeight }
+              : { height: "0px" }
+          }
+        >
+          <p className="answer-content">{answer}</p>
+        </div>
       </div>
-      <div
-        ref={contentHeight}
-        className="answer-container"
-        style={
-          isOpen && contentHeight.current
-            ? { height: contentHeight.current.scrollHeight }
-            //? { height: "200px" }
-            : { height: "0px" }
-        }
-      >
-        <p className="answer-content">{answer}</p>
-      </div>
-    </div>
-  );
-};
+    </>
+  )
+}
 
 const FAQ_Accordion = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null)
 
-  const handleItemClick = (index:any) => {
-    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
-  };
+  const handleItemClick = (index: any) => {
+    setActiveIndex((prevIndex) => (prevIndex === index ? null : index))
+  }
 
   return (
-    <div className="flex flex-col justify-evenly h-full w-1/2 max-sm:w-3/4">
+    <div className="flex flex-col justify-evenly h-full w-1/2 max-sm:w-3/4 z-20">
       {faq_data.map((item, index) => (
         <AccordionItem
           key={index}
@@ -52,7 +53,7 @@ const FAQ_Accordion = () => {
         />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default FAQ_Accordion;
+export default FAQ_Accordion

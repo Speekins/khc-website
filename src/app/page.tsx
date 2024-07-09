@@ -8,6 +8,7 @@ import Services from "./components/Services/Services"
 import Contact from "./components/Contact/Contact"
 import Resources from "./components/Resources/Resources"
 import React, { ReactNode, useEffect, useRef, useState } from "react"
+import useHasMounted from '../Hooks/useHasMounted'
 
 const RevealOnScroll = ({ children }: { children: ReactNode }) => {
   const [isVisible, setIsVisible] = useState(false)
@@ -42,10 +43,11 @@ const RevealOnScroll = ({ children }: { children: ReactNode }) => {
 }
 
 export default function Home() {
+  const hasMounted = useHasMounted()
 
   return (
-    <main className="flex min-h-screen flex-col items-center">
-      <Navbar />
+    <main className="">
+      {hasMounted && <Navbar />}
       <Hero />
       <RevealOnScroll>
         <About />
