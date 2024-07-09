@@ -21,7 +21,7 @@ const AccordionItem = ({ question, answer, isOpen, onClick }:PropTypes) => {
         ref={contentHeight}
         className="answer-container"
         style={
-          isOpen
+          isOpen && contentHeight.current
             ? { height: contentHeight.current.scrollHeight }
             //? { height: "200px" }
             : { height: "0px" }
