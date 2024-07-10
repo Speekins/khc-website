@@ -8,8 +8,8 @@ function Services() {
       </div>
       <div className='flex items-center justify-evenly w-1/2 h-3/4 max-sm:w-3/4 max-[500px]:w-2/3'>
         <div className='flex flex-col h-full w-1/3'>
-          <label htmlFor='treated-diagnoses' className='text-2xl'>Treated Diagnoses</label>
-          <ul id='treated-diagnoses' className='flex flex-col justify-evenly text-xl font-extralight list-disc h-full max-xl:text-lg max-md:text-md'>
+          <label htmlFor='treated-diagnoses' className='text-2xl font-sans font-extralight max-xl:text-xl max-lg:text-lg max-md:text-md'>Treated Diagnoses</label>
+          <ul id='treated-diagnoses' className='flex flex-col justify-evenly text-xl font-extralight list-disc h-full max-xl:text-lg max-md:text-sm'>
             <li className=''>Post Partum Mothers</li>
             <li className=''>Anxiety</li>
             <li className=''>Depression</li>
@@ -18,8 +18,8 @@ function Services() {
           </ul>
         </div>
         <div className='flex flex-col h-full w-1/3'>
-        <label htmlFor='modalities' className='text-2xl'>Modalities</label>
-          <ul id='modalities'className='flex flex-col justify-evenly text-xl font-extralight list-disc h-full max-xl:text-lg max-md:text-md'>
+        <label htmlFor='modalities' className='text-2xl font-sans font-extralight max-xl:text-xl max-lg:text-lg max-md:text-md'>Modalities</label>
+          <ul id='modalities'className='flex flex-col justify-evenly text-xl font-extralight list-disc h-full max-xl:text-lg max-md:text-sm'>
             <li className=''>EMDR</li>
             <li className=''>Cognitive Behavioral Therapy</li>
             <li className=''>Internal Family Systems</li>
