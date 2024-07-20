@@ -19,6 +19,7 @@ const ContactForm = () => {
     }
 
     setIsSubmitting(true)
+    console.log(e.target)
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
