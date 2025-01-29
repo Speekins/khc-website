@@ -71,11 +71,11 @@ export default function Home() {
       </RevealOnScroll>
       <footer className="flex flex-col mt-16 mb-4 items-center text-xs">
         {/* **S.HAKA—Added 7.20.24** Professional verification provided by Psychology Today */}
-          <a href="https://www.psychologytoday.com/profile/816221" className="sx-verified-seal"></a>
-          <script defer type="text/javascript" src="https://member.psychologytoday.com/verified-seal.js" data-badge="17" data-id="816221" data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy9bQkFER0VdL3Byb2ZpbGUvW1BST0ZJTEVfSURdP2NhbGxiYWNrPXN4Y2FsbGJhY2s="></script>
+        <a href="https://www.psychologytoday.com/profile/816221" className="sx-verified-seal"></a>
+        <script defer type="text/javascript" src="https://member.psychologytoday.com/verified-seal.js" data-badge="17" data-id="816221" data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy9bQkFER0VdL3Byb2ZpbGUvW1BST0ZJTEVfSURdP2NhbGxiYWNrPXN4Y2FsbGJhY2s="></script>
         {/* End Verification */}
         <p className="m-2 italic">©2024 Kimberly Haka Counseling. All rights reserved.</p>
-        <p className="m-2 italic>Privacy Policy: No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All other categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
+        <p className="m-2 italic">Privacy Policy: No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All other categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
       </footer>
     </main>
   )
